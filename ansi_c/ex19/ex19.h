@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// if not defined
+>>>>>>> 66b4d497e7619aed8d34f83813d4bc7cb347dfa2
 #ifndef _ex19_h
 #define _ex19_h
 
@@ -17,7 +21,13 @@ int Monster_init(void *self);
 struct Room
 {
     Object proto;
+<<<<<<< HEAD
     Monster *bad_guy;
+=======
+
+    Monster *bad_guy;
+
+>>>>>>> 66b4d497e7619aed8d34f83813d4bc7cb347dfa2
     struct Room *north;
     struct Room *south;
     struct Room *east;
@@ -42,5 +52,8 @@ typedef struct Map Map;
 void *Map_move(void *self, Direction direction);
 int Map_attack(void *self, int damage);
 int Map_init(void *self);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 66b4d497e7619aed8d34f83813d4bc7cb347dfa2
 #endif

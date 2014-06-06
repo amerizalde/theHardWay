@@ -21,9 +21,10 @@ void *Object_move(void *self, Direction direction);
 int Object_attack(void *self, int damage);
 void *Object_new(size_t size, Object proto, char *description);
 
-// create the NEW() creation method/function
+// create the NEW() macro for Object_new()
+// T is the arg for size, TProto is the name, N is the description
 #define NEW(T, N) Object_new(sizeof(T), T##Proto, N)
-// can write obj->_(N) in place of obj->proto.N
+// syntactic sugar for method calls
+// can write obj->_(method) in place of obj->proto.method
 #define _(N) proto.N
-
 #endif
